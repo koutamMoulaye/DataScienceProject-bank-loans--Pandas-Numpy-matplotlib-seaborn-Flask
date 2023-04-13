@@ -19,6 +19,7 @@ def predict():
     prediction = model.predict(final_features)
 
     output = round(prediction[0], 2)
+    #condition of refused or accepted
     if output == 0:
         return render_template('index.html', prediction_text='Your credit has been refused')
     else:
